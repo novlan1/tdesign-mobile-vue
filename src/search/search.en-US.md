@@ -1,6 +1,7 @@
 :: BASE_DOC ::
 
 ## API
+
 ### Search Props
 
 name | type | default | description | required
@@ -8,6 +9,7 @@ name | type | default | description | required
 action | String / Slot / Function | '' | Typescript：`string \| TNode`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts) | N
 autocompleteOptions | Array | - | autocomplete words list。Typescript：`Array<AutocompleteOption>` `type AutocompleteOption = string \| { label: string \| TNode; group?: boolean }`。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/blob/develop/src/common.ts)。[see more ts definition](https://github.com/Tencent/tdesign-mobile-vue/tree/develop/src/search/type.ts) | N
 center | Boolean | false | \- | N
+clearTrigger | String | always | show clear icon, clicked to clear input value。options: always / focus | N
 clearable | Boolean | true | \- | N
 disabled | Boolean | - | \- | N
 focus | Boolean | false | \- | N
@@ -18,6 +20,7 @@ placeholder | String | '' | \- | N
 readonly | Boolean | undefined | \- | N
 resultList | Array | [] | Typescript：`Array<string>` | N
 shape | String | 'square' | options: square/round | N
+type | String | search | options: search/text/number/url/tel | N
 value | String | - | `v-model` and `v-model:value` is supported | N
 defaultValue | String | - | uncontrolled property | N
 onActionClick | Function |  | Typescript：`(context: { e: MouseEvent }) => void`<br/> | N
